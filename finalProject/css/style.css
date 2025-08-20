@@ -1,0 +1,396 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    -webkit-margin-after: 0;
+    -webkit-margin-before: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* Skip to main content link - Only visible on focus */
+.skip-link {
+    position: absolute;
+    top: -50px;
+    left: 7px;
+    background: #0A400C;
+    color: #FEFAE0;
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 30px;
+    z-index: 1000;
+    font-weight: bold;
+    transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+    top: 7px;
+}
+
+/* Header and Navigation - Attractively styled with 3+ CSS properties */
+header {
+    background: linear-gradient(135deg, #387478 0%, #243642 100%);
+    color: #F7EFE5;
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Navigation using flex property */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50px;
+    padding: 0.5rem;
+    backdrop-filter: blur(10px);
+}
+
+nav li {
+    margin: 0 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    display: block;
+}
+
+/* Hover pseudo-class for navigation */
+nav a:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+nav a.active {
+    background: rgba(255,255,255,0.3);
+}
+
+/* Main content */
+main {
+    padding: 2rem 0;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    color: #4a5568;
+    text-align: center;
+    margin: 2rem 0 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Grid property applied to parent elements */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.content-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover pseudo-class for content cards */
+.content-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.content-card h3 {
+    color: #1A3636;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.gallery-item {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover pseudo-class for gallery items */
+.gallery-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.gallery-info {
+    padding: 1.5rem;
+}
+
+.gallery-info h3 {
+    color: #1A3636;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.gallery-info p {
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Image styling using box model - border, padding, border-radius */
+.feature-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    background: white;
+    transition: all 0.3s ease;
+    /*padding: 8px;*/
+    /*border: 4px solid #667eea;*/
+}
+
+/* Hover pseudo-class for images */
+.feature-image:hover {
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+    transform: scale(1.02);
+}
+
+.gallery-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border: 6px solid #73946B;
+    border-radius: 12px;
+    /*padding: 6px;*/
+    margin-bottom: 1rem;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+/* nth-child selector for gallery images */
+.gallery-image:nth-child(odd) {
+    border-radius: 50px 12px 50px 12px;
+    /*border-color: #f093fb;*/
+}
+
+.gallery-image:nth-child(even) {
+    border-radius: 12px 50px 12px 50px;
+    /*border-color: #4facfe;*/
+}
+
+.gallery-image:hover {
+    transform: scale(1.02);
+
+    /*border-width: 4px;*/
+}
+
+/* Flex property applied to parent elements */
+.tips-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 2rem 0;
+    justify-content: center;
+}
+
+.featured-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.tip-item {
+    flex: 1 1 250px;
+    background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);
+    color: #393E46;
+    padding: 1.5rem;
+    border-radius: 12px;
+    /*text-align: center;*/
+    transition: all 0.3s ease;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* nth-child selector for tip items */
+.tip-item:nth-child(odd) {
+    background: linear-gradient(45deg, #C4DAD2 10%, #E9EFEC 100%);
+}
+
+.tip-item:nth-child(even) {
+    background: linear-gradient(45deg, #E9EFEC 0%, #C4DAD2 100%);
+}
+
+/* Hover pseudo-class for tip items */
+.tip-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.featured-image {
+    flex: 1 1 200px;
+    width: 210px;
+    height: 180px;
+    border-radius: 20px;
+    filter: blur(1.2px);
+    transition: all 0.3s ease;
+    /*border: 4px solid #764ba2;*/
+    /*padding: 8px;*/
+    /*background: white;*/
+}
+
+/* nth-child selector for featured images with different styling */
+/*.featured-image:nth-child(1) {*/
+/*    !*border-color: #ff6b6b;*!*/
+/*    !*border-radius: 30px;*!*/
+/*}*/
+
+/*.featured-image:nth-child(2) {*/
+/*    !*border-color: #4ecdc4;*!*/
+/*    !*border-radius: 10px;*!*/
+/*}*/
+
+/*.featured-image:nth-child(3) {*/
+/*    !*border-color: #45b7d1;*!*/
+/*    !*border-radius: 25px;*!*/
+/*}*/
+
+/*.featured-image:nth-child(4) {*/
+/*    !*border-color: #f9ca24;*!*/
+/*    !*border-radius: 15px;*!*/
+/*}*/
+
+/*.featured-image:nth-child(5) {*/
+/*    !*border-color: #6c5ce7;*!*/
+/*    !*border-radius: 35px;*!*/
+/*}*/
+
+/* Hover pseudo-class for featured images */
+.featured-image:hover {
+    transform: rotate(3deg) scale(1.1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.featured-section {
+    margin: 3rem 0;
+}
+
+/* Footer */
+footer {
+    background: #243642;
+    color: #FFF7D1;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+/* Custom placeholder images */
+.placeholder-image {
+    background: linear-gradient(45deg, #629584, #E2F1E7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #F7EFE5;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/*.placeholder-landscape {*/
+/*    background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);*/
+/*}*/
+
+/*.placeholder-portrait {*/
+/*    background: linear-gradient(135deg, #fd79a8 0%, #e84393 100%);*/
+/*}*/
+
+/*.placeholder-nature {*/
+/*    background: linear-gradient(135deg, #00b894 0%, #00a085 100%);*/
+/*}*/
+
+/*.placeholder-street {*/
+/*    background: linear-gradient(135deg, #fdcb6e 0%, #e17055 100%);*/
+/*}*/
+
+/*.placeholder-macro {*/
+/*    background: linear-gradient(135deg, #a29bfe 0%, #6c5ce7 100%);*/
+/*}*/
+
+/*.placeholder-night {*/
+/*    background: linear-gradient(135deg, #2d3436 0%, #636e72 100%);*/
+/*}*/
+
+.main-title {
+    color: #1A3636;
+    margin-bottom: 1rem;
+    font-family: "Edu NSW ACT Cursive", cursive;
+    font-size: 2.8rem;
+    text-align: center;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.featured-image-overlay {
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+
