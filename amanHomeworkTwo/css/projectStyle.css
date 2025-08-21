@@ -1,0 +1,107 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    -webkit-margin-after: 0;
+    -webkit-margin-before: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+}
+
+header {
+    background-color: #EBE8DB;
+    padding: 10px;
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*flex-direction: column;*/
+}
+header img {
+    width: 10%;
+    height: 20%;
+}
+
+nav {
+    font-size: 140%;
+    width: 70%;
+    height: 50px;
+    align-content: center;
+    margin: auto auto;
+    border-radius: 50px;
+}
+
+nav ul {
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+main {
+    background-color: #FFE100;
+    font-size: 100%;
+    padding: 10px 50px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+footer {
+    padding: 10px;
+    background-color: #9CAFAA;
+}
+
+li {
+    display: inline;
+    width: auto;
+    padding: 0 10px;
+}
+
+header h1 {
+    text-align: center;
+    /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
+    font-size: 250%;
+    font-family: "Edu NSW ACT Cursive", cursive;
+    color: #210F37;
+    padding: 10px 0;
+}
+
+p {
+    line-height: 1.5;
+    font-family: "Libertinus Sans", sans-serif;
+    font-size: 135%;
+}
+
+.gallery-item {
+    width: 250px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.grid-gallery {
+    display: grid;
+    grid-template-columns: 35% 35%;
+    grid-gap: 50px;
+    justify-content: space-evenly;
+}
+
+.flex-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
