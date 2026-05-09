@@ -1,5 +1,4 @@
 # Introduction-to-CSS3
-This a project where I'll be just trying out my further learnings of CSS.
 
 Assignments and projects completed during the Coursera course.
 
