@@ -1,4 +1,4 @@
-# Introduction-to-CSS3
+# Introduction to CSS3
 
 Assignments and projects completed during the Coursera course.
 
